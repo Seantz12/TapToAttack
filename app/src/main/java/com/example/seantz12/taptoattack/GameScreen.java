@@ -30,7 +30,10 @@ public class GameScreen extends Activity {
         Point resolution = new Point();
         display.getSize(resolution);
 
-        gameView = new GameView(this, resolution.x, resolution.y);
+        Bundle bundle = getIntent().getExtras();
+
+
+        gameView = new GameView(this, resolution.x, resolution.y, bundle.getString("enemy"), bundle.getInt("levelNum"));
         setContentView(gameView);
     }
 

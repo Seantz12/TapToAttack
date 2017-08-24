@@ -11,12 +11,12 @@ import android.graphics.BitmapFactory;
 public class Enemy {
     Bitmap enemy;
     int hp;
-    int speed;
-    int xPos;
-    int yPos;
+    float speed;
+    float xPos;
+    float yPos;
     // boolean range (to be implemented later)
 
-    public Enemy(Context context, String enemy, int hp, int speed, int xPos, int yPos) {
+    public Enemy(Context context, String enemy, int hp, float speed, float xPos, float yPos) {
         // Makes enemy name into something that can access the resource needed
         int id = context.getResources().getIdentifier(enemy, "drawable",
                 context.getPackageName());
